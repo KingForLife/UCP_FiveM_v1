@@ -1,0 +1,27 @@
+local charset = {}  do -- [0-9a-z]
+    for c = 48, 57  do table.insert(charset, string.char(c)) end
+    for c = 97, 122 do table.insert(charset, string.char(c)) end
+end
+
+local function random_cod2(length)
+    if not length or length <= 0 then return '' end
+    math.randomseed(os.clock()^5)
+    return random_cod2(length - 1) .. charset[math.random(1, #charset)]
+end
+
+RegisterCommand('panel',function(player,args)
+    local user_id = vRP.getUserId({player})
+    if(user_id ~= nil) then
+        exports.ghmattimysql:execute("SELECT * FROM vrp_users WHERE id = @id",{id = user_id}, function(rows)
+        if(#rows > 0) then
+            if(rows[1].panel_code == 'none') then
+                codul = random_cod2(7)
+                exports.ghmattimysql:execute("UPDATE vrp_users SET panel_code = @panel_code WHERE id = @user_id",{user_id = user_id, panel_code = codul}, function() end)
+                TriggerClientEvent("chatMessage", player, "^0[^kWCODE^0] Codul tau pentru panel este: "..tostring(codul) )
+            else
+                TriggerClientEvent("chatMessage", player, "^0[^kWCODE^0] Codul tau pentru panel este: "..tostring(codul) )         
+            end
+        end
+        end)
+    end
+end)
