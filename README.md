@@ -25,6 +25,9 @@
 
 `panelcode.txt` ->  reprezintă comanda ce trebuie integrata in server chat pentru a genera codul necesar înregistrării contului.
 
+- Tutorial Video:
+![YouTube](https://www.youtube.com/watch?v=I0iW8_Ncogw)
+
 ---
 
 ## 🤔 **INFORMAȚII DE SECURITATE**
