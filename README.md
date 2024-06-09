@@ -1,10 +1,5 @@
 # 🔥 **FiveM UCP v1.0**
 
-## DOWNLOAD FISIERE PRINCIPALE:
-
-* Laravel: https://drive.google.com/file/d/1nrtjcQfGLmt6BSh2rwdDIpzIXRCO_LsA/view?usp=sharing
-* Panel: https://drive.google.com/file/d/1t2Lexs8-TGntRNkn-wivs6FhqE0XwC1c/view?usp=sharing
-
 ---
 
 ## 🤔 **INFORMAȚII ADIȚIONALE**
